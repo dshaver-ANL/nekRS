@@ -241,7 +241,7 @@ void RANSktau::updateProperties()
              MPI_COMM_SELF,
              EXIT_FAILURE,
              "%s\n",
-             "called prior to tavg::setup()!");
+             "called prior to RANS::setup()!");
 
   platform->options.getArgs("FLUID VISCOSITY", mueLam);
   platform->options.getArgs("FLUID DENSITY", rho);
@@ -310,7 +310,7 @@ void RANSktau::updateSourceTerms()
              MPI_COMM_SELF,
              EXIT_FAILURE,
              "%s\n",
-             "called prior to tavg::setup()!");
+             "called prior to RANS::setup()!");
 
   auto mesh = nrs->fluid->mesh;
   auto &scalar = nrs->scalar;
